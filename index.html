@@ -1,51 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hierarchical Diffusion Motion Planning</title>
+
+  <!-- Bulma CSS for styling -->
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
 </head>
 <body>
-  <div style="text-align:center">
-  <header>
-    <h1>Hierarchical Diffusion Motion Planning with Task-Conditioned Uncertainty-Aware Priors</h1>
-    <!--<h2>with Task-Conditioned Uncertainty-Aware Priors</h2>-->
-    <p><strong>Authors:</strong> anonymous author(s) </p>
-    <p><strong>Conference:</strong> ICRA 2026 (Submitted)</p>
-  </header>
 
-  <main>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              Hierarchical Diffusion Motion Planning with Task-Conditioned Uncertainty-Aware Priors
+            </h1>
+            <h2 class="subtitle">Under Review</h2>
 
-    <section>
-      <h2>Main Results</h2>
-      <ul>
-        <li>KUKA block stacking tasks</li>
-      </ul>
-      <video controls width="600">
-        <source src="./static/videos/KUKA/ours-9.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </section>
-  </main>
-  </div>
+            <!-- ========================= Publication Links (Button Row) =========================-->
+            <div class="publication-links" style="margin-top: 20px;">
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/xxxx.xxxxx"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper (available soon)</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://github.com/xxxx"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code (available soon)</span>
+                </a>
+              </span>
+              
+              <span class="link-block">
+                <a href="https://drive.google.com/file/d/1Re3htFHSIHfTLV211zEXA_mCwSnyi2j_/view?usp=sharing"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-youtube"></i></span>
+                  <span>Video</span>
+                </a>
+              </span>
+            </div>
+            <!-- ========================= End of Button Row =========================-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ <!--=============================== OVERVIEW ===============================-->
+   <section class="section">
+    <div class="container is-max-desktop has-text-centered">
+      <!--<h2 class="title is-3">Overview</h2>-->
+      <div class="columns is-centered">
+        <div class="column">
+          <video controls width="700">
+            <source src="./static/videos/ICRA26_4420_VI_i.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          
+          <blockquote class="content has-text-justified is-size-6 mt-5"> <!--is-size-5: font_size (smaller, the bigger), mt-5 : margin-->  
+We propose a novel hierarchical diffusion planner that embeds task and motion structure directly in the noise model.
+Unlike standard diffusion-based planners that use zero-mean, isotropic Gaussian noise, 
+we employ a \emph{family of task-conditioned structured Gaussians} whose means and covariances are derived from Gaussian Process Motion Planning (GPMP): sparse, task-centric key states or their associated timings (or both) are treated as noisy observations to produce a prior instance.
+We first generalize the standard diffusion process to biased, non-isotropic corruption with closed-form forward and posterior expressions.
+Building on this, our hierarchy separates prior instantiation from trajectory denoising:
+the upper level instantiates a task-conditioned structured Gaussian (mean and covariance), and the lower level denoises the full trajectory under that fixed prior.
+Experiments on Maze2D goal-reaching and KUKA block stacking show improved success rates, smoother trajectories, and stronger task alignment compared to isotropic baselines. Ablation studies indicate that explicitly structuring the corruption process offers benefits beyond simply conditioning the neural network.
+Overall, our method concentrates probability mass of prior near feasible, smooth, and semantically meaningful trajectories while maintaining tractability. 
+	</blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+ <!--=============================== RESULT ===============================-->
+  <!--========================= Maze2D Results =========================-->
+  <section class="section">
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="title is-3">Maze2D</h2>
+      <div class="columns is-centered">
+        <div class="column">
+          <video controls width="400">
+            <source src="./static/videos/Maze2D/traj_7_guided_iso_slow.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class = " is-size-5 mt-3">Isotropic Gaussian Baseline</p>
+        </div>
+        <div class="column">
+          <video controls width="400">
+            <source src="./static/videos/Maze2D/traj_7_GPMP_slow.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class = " is-size-5 mt-3">Ours</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--========================= KUKA Results =========================-->
+  <section class="section">
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="title is-3">KUKA Block Stacking</h2>
+      <div class="columns is-centered">
+        <div class="column">
+          <video controls width="480">
+            <source src="./static/videos/KUKA/isotropic-9.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class = " is-size-5 mt-3">Isotropic Gaussian Baseline</p>
+        </div>
+        <div class="column">
+          <video controls width="480">
+            <source src="./static/videos/KUKA/ours-9.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class = " is-size-5 mt-3">Ours</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!--<footer class="footer">
+    <div class="content has-text-centered">
+      <p class = " is-size-5 mt-3">© 2025 Your Name(s). Website powered by <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+    </div>
+  </footer>-->
+
 </body>
 </html>
-
- <!--
-    <section>
-      <h2>Paper & Resources</h2>
-      <ul>
-        <li><a href="https://arxiv.org/abs/xxxx.xxxxx">Paper (arXiv)</a></li>
-        <li><a href="https://github.com/hta-diffusion/hta-diffusion">Code Repository</a></li>
-        <li><a href="./static/videos/icra2026.mp4">Video Submission</a></li>
-      </ul>
-    </section>
-  </main>
-  <footer>
-    <p>© 2025 Your Name(s). Website powered by <a href="https://pages.github.com/">GitHub Pages</a>.</p>
-  </footer> 
-  </div>
-</body>
-</html>-->
 
