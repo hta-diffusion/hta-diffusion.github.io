@@ -107,8 +107,8 @@ Overall, our method concentrates probability mass of prior near feasible, smooth
     <div class="container is-max-desktop has-text-centered">
       <h2 class="title is-3">Maze2D</h2>
   <!------------------------------------------------------->
-  <!-------------------- motion video --------------------->
-      <h3 class="title is-3">Motion Comparison</h3>
+  <!-------------------- motion video - horizontal compare--------------------->
+      <h3 class="title is-3.5">Motion Comparison</h3>
       <div class="columns is-centered">
         <div class="column">
           <video autoplay loop muted playsinline width="400">
@@ -125,24 +125,69 @@ Overall, our method concentrates probability mass of prior near feasible, smooth
           <p class = " is-size-5 mt-3">Ours</p>
         </div>
       </div>
+  <!-------------------- motion video - vertical compare--------------------->
+      <!--------- isotropic ---------->
+      <div class="columns is-centered">
+        <div class="column">
+          <video controls width="300">
+            <source src="./static/videos/Maze2D/traj_8_iso.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="column">
+          <video controls width="300">
+            <source src="./static/videos/Maze2D/traj_16_iso.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="column">
+          <video controls width="300">
+            <source src="./static/videos/Maze2D/traj_21_iso.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <p class = " is-size-5">Isotropic Gaussian Baseline</p>
+      <!----------- ours ------------>
+      <div class="columns is-centered">
+        <div class="column">
+          <video controls width="300">
+            <source src="./static/videos/Maze2D/traj_8_GPMP.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="column">
+          <video controls width="300">
+            <source src="./static/videos/Maze2D/traj_16_GPMP.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="column">
+          <video controls width="300">
+            <source src="./static/videos/Maze2D/traj_21_GPMP.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <p class = " is-size-5">Ours</p>
       <!-------------------- denoising video --------------------->
-      <h3 class="title is-3">Denoising Process Comparison</h3>
+      <h3 class="title is-3.5 mt-3">Denoising Process Comparison</h3>
       <!----------- denoising: isotropic ------------->
       <div class="columns is-centered">
         <div class="column">
-          <video autoplay loop muted playsinline width="230">
+          <video controls width="230">
             <source src="./static/videos/Maze2D/chain_7_iso.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <video autoplay loop muted playsinline width="230">
+          <video controls width="230">
             <source src="./static/videos/Maze2D/chain_8_iso.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <video autoplay loop muted playsinline width="230">
+          <video controls width="230">
             <source src="./static/videos/Maze2D/chain_13_iso.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <video autoplay loop muted playsinline width="230">
+          <video controls width="230">
             <source src="./static/videos/Maze2D/chain_15_iso.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
@@ -152,19 +197,19 @@ Overall, our method concentrates probability mass of prior near feasible, smooth
       <!----------- denoising: ours ------------->
       <div class="columns is-centered">
         <div class="column">
-          <video autoplay loop muted playsinline width="230">
+          <video controls width="230">
             <source src="./static/videos/Maze2D/chain_7_ours.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <video autoplay loop muted playsinline width="230">
+          <video controls width="230">
             <source src="./static/videos/Maze2D/chain_8_ours.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <video autoplay loop muted playsinline width="230">
+          <video controls width="230">
             <source src="./static/videos/Maze2D/chain_13_ours.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <video autoplay loop muted playsinline width="230">
+          <video controls width="230">
             <source src="./static/videos/Maze2D/chain_15_ours.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
@@ -180,6 +225,8 @@ Overall, our method concentrates probability mass of prior near feasible, smooth
   <section class="section">
     <div class="container is-max-desktop has-text-centered">
       <h2 class="title is-3">KUKA Block Stacking</h2>
+      <!------------------- Motion --------------------->
+      <h3 class="title is-3.5">Motion Comparison</h3>
       <!----------- Task1 ------------->
       <div class="columns is-centered">
         <div class="column">
