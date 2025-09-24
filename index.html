@@ -82,7 +82,7 @@
       <h2 class="title is-3">Overview</h2>
       <div class="columns is-centered">
         <div class="column">
-          <video controls width="700">
+          <video autoplay loop muted playsinline width="700">
             <source src="./static/videos/website_video.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
@@ -106,40 +106,110 @@ Overall, our method concentrates probability mass of prior near feasible, smooth
   <section class="section">
     <div class="container is-max-desktop has-text-centered">
       <h2 class="title is-3">Maze2D</h2>
+  <!------------------------------------------------------->
+  <!-------------------- motion video --------------------->
+      <h3 class="title is-3">Motion Comparison</h3>
       <div class="columns is-centered">
         <div class="column">
-          <video controls width="400">
+          <video autoplay loop muted playsinline width="400">
             <source src="./static/videos/Maze2D/traj_7_guided_iso_slow.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
           <p class = " is-size-5 mt-3">Isotropic Gaussian Baseline</p>
         </div>
         <div class="column">
-          <video controls width="400">
+          <video autoplay loop muted playsinline width="400">
             <source src="./static/videos/Maze2D/traj_7_GPMP_slow.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
           <p class = " is-size-5 mt-3">Ours</p>
         </div>
       </div>
+      <!-------------------- denoising video --------------------->
+      <h3 class="title is-3">Denoising Process Comparison</h3>
+      <!----------- denoising: isotropic ------------->
+      <div class="columns is-centered">
+        <div class="column">
+          <video autoplay loop muted playsinline width="230">
+            <source src="./static/videos/Maze2D/chain_7_iso.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <video autoplay loop muted playsinline width="230">
+            <source src="./static/videos/Maze2D/chain_8_iso.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <video autoplay loop muted playsinline width="230">
+            <source src="./static/videos/Maze2D/chain_13_iso.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <video autoplay loop muted playsinline width="230">
+            <source src="./static/videos/Maze2D/chain_15_iso.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <p class = " is-size-5 mt-3">Isotropic Gaussian Baseline</p>
+      <!----------- denoising: ours ------------->
+      <div class="columns is-centered">
+        <div class="column">
+          <video autoplay loop muted playsinline width="230">
+            <source src="./static/videos/Maze2D/chain_7_ours.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <video autoplay loop muted playsinline width="230">
+            <source src="./static/videos/Maze2D/chain_8_ours.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <video autoplay loop muted playsinline width="230">
+            <source src="./static/videos/Maze2D/chain_13_ours.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <video autoplay loop muted playsinline width="230">
+            <source src="./static/videos/Maze2D/chain_15_ours.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <p class = " is-size-5 mt-3">Ours</p>
+    <!------------------------------------------------------->
     </div>
   </section>
+  
 
   <!--========================= KUKA Results =========================-->
   <section class="section">
     <div class="container is-max-desktop has-text-centered">
       <h2 class="title is-3">KUKA Block Stacking</h2>
+      <!----------- Task1 ------------->
       <div class="columns is-centered">
         <div class="column">
-          <video controls width="480">
+          <video autoplay loop muted playsinline width="450">
             <source src="./static/videos/KUKA/isotropic-9.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
           <p class = " is-size-5 mt-3">Isotropic Gaussian Baseline</p>
         </div>
         <div class="column">
-          <video controls width="480">
+          <video autoplay loop muted playsinline width="450">
             <source src="./static/videos/KUKA/ours-9.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class = " is-size-5 mt-3">Ours</p>
+        </div>
+      </div>
+      
+      <!----------- Task2 ------------->
+      <div class="columns is-centered">
+        <div class="column">
+          <video autoplay loop muted playsinline width="450">
+            <source src="./static/videos/KUKA/isotropic-12.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class = " is-size-5 mt-3">Isotropic Gaussian Baseline</p>
+        </div>
+        <div class="column">
+          <video autoplay loop muted playsinline width="450">
+            <source src="./static/videos/KUKA/ours-12.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
           <p class = " is-size-5 mt-3">Ours</p>
